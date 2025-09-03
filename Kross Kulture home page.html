@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:8000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Kross Kulture</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="./Kross Kulture home page_files/all.min.css">
+
+
+  <!-- Styles -->
+  <style>
+    /* Top Banner */
+    .top-banner {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 8px;
+      font-size: 14px;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Header */
+    .main-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      font-family: 'Georgia', serif;
+    }
+
+    .search-bar input {
+      width: 300px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .header-icons a {
+      margin-left: 20px;
+      font-size: 18px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    /* Navigation Menu */
+    .nav-menu {
+      background-color: #f8f8f8;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .nav-menu ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 10px 0;
+    }
+
+    .nav-menu li {
+      margin: 0 15px;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Hero Slider */
+    .hero-slider {
+      position: relative;
+      width: 100%;
+      height: 90vh;
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+    .whats-new {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.whats-new h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.brand-card {
+  text-align: center;
+}
+
+.brand-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.brand-card img:hover {
+  transform: scale(1.05);
+}
+
+.brand-card p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+}
+.shop-by-category {
+  padding: 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.shop-by-category h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.category-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+  transform: scale(1.03);
+}
+
+.category-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.category-label {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.site-footer {
+  background-color: #f8f8f8;
+  padding: 3rem 2rem;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.footer-column h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.footer-column p,
+.footer-column a {
+  font-size: 0.9rem;
+  color: #555;
+  text-decoration: none;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.5rem;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.newsletter form {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.newsletter input[type="email"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+
+.newsletter button {
+  padding: 8px 12px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Top Banner -->
+  <div class="top-banner">
+    FREE SHIPPING ON ALL ORDERS ABOVE ₨3000
+  </div>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo">KROSS KULTURE</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search for products">
+    </div>
+    <div class="header-icons">
+      <a href="http://127.0.0.1:8000/#"><i class="fa fa-user"></i></a>
+      <a href="http://127.0.0.1:8000/#"><i class="fa fa-shopping-cart"></i></a>
+    </div>
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav class="nav-menu">
+    <ul>
+      <li><a href="http://127.0.0.1:8000/sale">SALE</a></li>
+      <li><a href="http://127.0.0.1:8000/#">NEW-IN</a></li>
+      <li><a href="http://127.0.0.1:8000/#">VASL PRE-WINTER'23</a></li>
+      <li><a href="http://127.0.0.1:8000/#">KK STUDIO</a></li>
+      <li><a href="http://127.0.0.1:8000/#">LUXURY PRET</a></li>
+      <li><a href="http://127.0.0.1:8000/#">ROZANA RTW</a></li>
+      <li><a href="http://127.0.0.1:8000/#">KIDS</a></li>
+      <li><a href="http://127.0.0.1:8000/#">ACCESSORIES</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Slider -->
+  <section class="hero-slider">
+    <div class="slide" style="background-image: url(&#39;http://127.0.0.1:8000/pictures/1.webp&#39;);"></div>
+    <div class="slide active" style="background-image: url(&#39;http://127.0.0.1:8000/pictures/2.webp&#39;);"></div>
+    <div class="slide" style="background-image: url(&#39;http://127.0.0.1:8000/pictures/3.webp&#39;);"></div>
+  </section>
+<section class="whats-new">
+  <h2>WHAT'S NEW</h2>
+  <div class="brand-grid">
+    
+          <div class="brand-card">
+        <img src="./Kross Kulture home page_files/4.avif" alt="Mein Aur Ami">
+        <p>Mein Aur Ami</p>
+      </div>
+          <div class="brand-card">
+        <img src="./Kross Kulture home page_files/5.avif" alt="Afsana">
+        <p>Afsana</p>
+      </div>
+          <div class="brand-card">
+        <img src="./Kross Kulture home page_files/6.avif" alt="Rohani">
+        <p>Rohani</p>
+      </div>
+          <div class="brand-card">
+        <img src="./Kross Kulture home page_files/7.avif" alt="KK Studio-Kahani">
+        <p>KK Studio-Kahani</p>
+      </div>
+          <div class="brand-card">
+        <img src="./Kross Kulture home page_files/8.avif" alt="Riwajat Luxury Pret">
+        <p>Riwajat Luxury Pret</p>
+      </div>
+          <div class="brand-card">
+        <img src="./Kross Kulture home page_files/What_s_New_Rozmara_Collection_Circle.avif" alt="Rozmara">
+        <p>Rozmara</p>
+      </div>
+      </div>
+</section>
+<section class="shop-by-category">
+  <h2>SHOP BY CATEGORY</h2>
+  <div class="category-grid">
+    
+          <div class="category-card">
+        <img src="./Kross Kulture home page_files/9.webp" alt="Festive Wear">
+        <div class="category-label">Festive Wear</div>
+      </div>
+          <div class="category-card">
+        <img src="./Kross Kulture home page_files/matching_separates_2202bd1a-ae30-477e-a0ba-8c1ad5c74148.webp" alt="Matching Separates">
+        <div class="category-label">Matching Separates</div>
+      </div>
+          <div class="category-card">
+        <img src="./Kross Kulture home page_files/kids.webp" alt="Kids">
+        <div class="category-label">Kids</div>
+      </div>
+          <div class="category-card">
+        <img src="./Kross Kulture home page_files/embroidered_90041669-564a-4fa0-ac07-4c7f62b96766.webp" alt="Embroidered">
+        <div class="category-label">Embroidered</div>
+      </div>
+      </div>
+</section>
+
+
+  <!-- Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let slides = document.querySelectorAll('.slide');
+      let current = 0;
+
+      setInterval(() => {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+      }, 4000);
+    });
+  </script>
+
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-column">
+      <h4>CONTACT US</h4>
+      <p>Email: <a href="mailto:info@krosskulture.com">info@krosskulture.com</a></p>
+      <p>Phone: <a href="tel:+923018675756">+92 301 8675756</a></p>
+      <div class="social-icons">
+        <a href="http://127.0.0.1:8000/#"><i class="fab fa-facebook-f"></i></a>
+        <a href="http://127.0.0.1:8000/#"><i class="fab fa-instagram"></i></a>
+        <a href="http://127.0.0.1:8000/#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h4>CUSTOMER CARE</h4>
+      <ul>
+        <li><a href="http://127.0.0.1:8000/#">Shipping and Exchange Policy</a></li>
+        <li><a href="http://127.0.0.1:8000/#">Privacy Policy</a></li>
+        <li><a href="http://127.0.0.1:8000/#">Store Locator</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>INFORMATION</h4>
+      <ul>
+        <li><a href="http://127.0.0.1:8000/#">Contact Us</a></li>
+        <li><a href="http://127.0.0.1:8000/#">About Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column newsletter">
+      <h4>NEWSLETTER SIGNUP</h4>
+      <p>Subscribe to stay updated on news and special events.</p>
+      <form action="http://127.0.0.1:8000/#" method="POST">
+        <input type="email" name="email" placeholder="Enter your email" required="">
+        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+</footer>
+
+
+</body></html>
